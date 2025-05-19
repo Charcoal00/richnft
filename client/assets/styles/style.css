@@ -22,9 +22,11 @@ sans-serif; */
     padding: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 ul,
 li {
     padding: 0;
@@ -37,6 +39,7 @@ body {
     color: var(--text-color);
     font-family: var(--font1);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
@@ -49,12 +52,26 @@ footer {
 }
 
 header {
+    position: relative;
+    z-index: 10;
     width: clamp(300px, 80%, 1000px);
     margin: 50px auto;
     border-radius: 20px;
-    border: 1px solid var(--text-color);
+    border: 1px solid #666666ab;
     background-color: var(--background);
     padding: 0.7rem 1.6rem;
+}
+
+.header-background {
+    z-index: 0;
+    width: 100%;
+    height: 130vh;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    /* transform: translateX(20%); */
+    background-position: 10vw 0px !important;
+    background-image: url("../public/background.svg");
 }
 
 .site-header nav {
@@ -85,7 +102,7 @@ header {
 }
 
 .nav-links2 {
-    height: 60%;
+    height: 40%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -121,14 +138,14 @@ header {
 .rich-card-content p {
     font-size: 1rem;
     padding: 10px 15px;
-    background-color: #2f2917;
+    background-color: #242113;
     cursor: pointer;
     border-radius: 9px;
     position: relative;
     z-index: 2;
 }
 
-.to-top{
+.to-top {
     background-color: var(--background);
     border: 1px solid var(--text-color);
     position: fixed;
@@ -139,20 +156,29 @@ header {
     width: 40px;
     height: 40px;
     animation: moving 1s ease-in-out infinite alternate;
+    padding: 5px;
 }
+
+.to-top img {
+    width: 100%;
+    height: auto;
+}
+
 @keyframes moving {
-    from{
+    from {
         transform: translateY(10%);
     }
-    to{
+
+    to {
         transform: translateY(0%);
     }
 }
 
 @media screen and (max-width: 770px) {
-    .active{
+    .active {
         overflow: hidden;
     }
+
     .active .nav-container {
         transform: translateX(0%);
     }
@@ -201,8 +227,70 @@ header {
         height: 2px;
         border-radius: 10px;
     }
+
+
+    .hero {
+        height: auto !important;
+        margin-bottom: 50px;
+    }
+
+    section.hero h1 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        font-size: 0.9rem !important;
+        padding: 0.4rem 1rem !important;
+    }
 }
 
+@media screen and (max-width: 500px) {
+    header {
+        padding: 5px 15px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    section.hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo,
+    footer .footer-logo {
+        font-size: 1.4rem;
+    }
+
+    .hero .tagline {
+        width: 210px;
+        font-size: 0.6rem;
+    }
+
+    .cta-buttons {
+        width: 200px;
+    }
+
+    .btn {
+        font-size: 0.9rem !important;
+        padding: 0.4rem 1rem !important;
+    }
+
+    #close {
+        right: 25px;
+    }
+
+    .to-top {
+        bottom: 25px;
+        right: 25px;
+    }
+
+    #hamburger,
+    #close {
+        width: 20px;
+        height: 15px;
+    }
+}
 
 .primary,
 .secondary-nft,
@@ -210,7 +298,7 @@ header {
     position: relative;
     background: var(--primary-color);
     color: var(--text-color);
-    background-color: #564100;
+    background-color: #242113;
 }
 
 .contact-btn::before,
@@ -226,7 +314,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, #9f7700, #ffc823, #a17900);
+    background: linear-gradient(to right, #a17900c6, #ffc927, #a17900c6);
     z-index: -1;
     margin: -1px;
     border-radius: 10px;
@@ -245,6 +333,7 @@ header {
 }
 
 .tagline {
+    color: #C8E02B;
     text-align: center;
     font-size: 0.7rem;
     position: relative;
@@ -283,12 +372,12 @@ header {
     border-radius: var(--btn-radius);
     border: none;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transition) !important;
 }
 
 
 .secondary {
-    background-color: #555;
+    background-color: #363636;
 
     color: var(--text-color);
 }
@@ -300,18 +389,18 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 40px 0;
     background-color: #0a0a0a;
     /* Darker background */
 }
 
 .rich-card {
-    background-color: #141414;
+    background-color: #121111;
     color: #e0e0e0;
     border-radius: 10px;
     padding: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: clamp(300px, 80%, 900px);
+    width: clamp(300px, 85%, 900px);
     border: 4px solid #4b4b4b;
 }
 
@@ -335,12 +424,13 @@ header {
     padding: 10px 20px 15px;
     border: 1px solid #4b4b4b;
     border-radius: 10px;
-    background-color: #1c1c1c;
+    background-color: #1c1c1c5e;
 }
 
 .rich-card-overview {
-    margin: 1rem auto 1rem 65%;
+    margin: 1rem 30px 1rem auto;
     width: 30%;
+    min-width: 180px;
     padding: 5px 10px;
     background: linear-gradient(to top, #222222, #2f2f2f, #222222);
     border-radius: 10px 0px 25px 10px;
@@ -392,7 +482,9 @@ header {
 }
 
 .tokenomics-section {
-    padding: 50px;
+    padding: 50px 0;
+    width: 85%;
+    margin: 0 auto;
     background-color: #0a0a0a;
     color: #e0e0e0;
     text-align: center;
@@ -409,6 +501,8 @@ header {
 .tokenomics-content {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 50px;
     align-items: flex-start;
     max-width: 1200px;
@@ -416,6 +510,7 @@ header {
 }
 
 .tokenomics-left {
+    flex: 0 0 270px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -505,9 +600,10 @@ header {
 
 /* tokenomics-address styles */
 .tokenomics-address {
+    border: 1px solid var(--text-color);
     position: relative;
     z-index: 2;
-    background-color: #1e1e1e;
+    background-color: #111111e5;
     border-radius: 5px;
     padding: 5px 20px;
     display: flex;
@@ -534,13 +630,11 @@ header {
     color: #ccc;
 }
 
-/* tokenomics-right styles */
 .tokenomics-right {
     max-width: 500px;
-    /* Adjust width as needed */
+    flex: 0 0 500px;
 }
 
-/* tokenomics-tabs styles */
 .tokenomics-tabs {
     z-index: 2;
     border-top: 2px solid #1e1e1e;
@@ -556,7 +650,7 @@ header {
     display: block;
     position: absolute;
     width: 50%;
-    background-color: #1e1e1e;
+    background-color: #383838a4;
     height: 100%;
     top: 0%;
     left: 0%;
@@ -577,6 +671,7 @@ header {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
+    font-family: var(--font1);
     transition: color 0.3s ease;
 }
 
@@ -588,6 +683,10 @@ header {
 .tokenomics-description {
     line-height: 1.6;
     text-align: left;
+}
+
+p.tokenomics-description span {
+    font-weight: bold;
 }
 
 .tab-content {
@@ -615,6 +714,43 @@ header {
 
 .swiper #open-market {
     left: 0;
+}
+
+@media screen and (max-width: 920px) {
+    .tokenomics-tabs {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tokenomics-content {
+        display: block;
+    }
+
+    .tokenomics-left {
+        margin-bottom: 60px;
+    }
+
+    .tokenomics-right {
+        margin: 0 auto;
+    }
+
+    .tokenomics-title,
+    .buy-rich-button {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .tokenomics-title,
+    .buy-rich-button {
+        font-size: 1.6rem;
+    }
+
+    .rich-card-body {
+        padding: 10px 7px;
+    }
 }
 
 
@@ -660,12 +796,12 @@ header {
 }
 
 .card {
+    width: 90%;
     box-sizing: border-box;
     position: relative;
     margin: 2px;
     flex: 0 0 200px;
     background-color: var(--background);
-    color: white;
     font-size: 1.2rem;
     scroll-snap-align: center;
     border-radius: 8px;
@@ -675,10 +811,15 @@ header {
 
 .card span {
     display: block;
-    background-color: #555;
+    /* background-color: #555; */
     width: 50px;
     height: 50px;
     margin-bottom: 40px;
+}
+
+.card span img {
+    width: 100%;
+    height: auto;
 }
 
 .card:before {
@@ -686,7 +827,7 @@ header {
 }
 
 .card h3 {
-    min-width: 400px;
+    min-width: 250px;
     line-height: 1.8rem;
     margin-bottom: 20px;
     font-size: 1.4rem;
@@ -795,6 +936,38 @@ header {
     width: 100%;
 }
 
+@media screen and (max-width: 500px) {
+    .roadmap-header h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    #prevBtn,
+    #nextBtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .roadmap-header p {
+        font-size: 0.9rem;
+    }
+
+    .rocket-icon,
+    .card span {
+        width: 30px;
+        height:
+            30px;
+    }
+}
+
 
 
 /* nft product  */
@@ -806,7 +979,7 @@ header {
 }
 
 .product-card {
-    background-color: #1f1f1f;
+    background-color: #111214;
     border-radius: 22px;
     border: 1px solid #555;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -840,7 +1013,7 @@ header {
 }
 
 .product-cta {
-    background-color: #4b4b4b;
+    background-color: #1e1e1e;
     color: white;
     border: 1px solid #555;
     padding: 10px 15px;
@@ -882,8 +1055,33 @@ header {
 }
 
 @media (max-width: 500px) {
-    .product-grid {
+
+    /* .product-grid {
         grid-template-columns: 1fr;
+    } */
+    .product-grid {
+        padding: 20px 0;
+    }
+
+    .product-image {
+        padding: 4px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-card {
+        border-radius: 12px;
+    }
+
+    .product-cta {
+        padding: 5px;
+        border-radius: 6px;
+    }
+
+    .secondary-nft {
+        margin: 15px auto;
     }
 }
 
@@ -893,12 +1091,11 @@ header {
 /* donate card */
 .donation-section {
     position: relative;
-    background-color: #1f1f1f;
+    background-color: #111214;
     padding: 50px;
     border-radius: 40px;
     margin: 60px auto;
     width: 70%;
-    min-width: 300px;
 }
 
 .donation-section::before {
@@ -951,7 +1148,7 @@ header {
 .donate-button {
     border-radius: 9px;
     padding: 15px 40px;
-    background-color: #2f2917;
+    background-color: #17140c;
     color: var(--text-color);
     font-size: 1.1em;
     font-weight: bold;
@@ -966,12 +1163,28 @@ header {
 
 @media (max-width: 768px) {
     .donation-section {
-        padding: 30px;
-        margin: 15px;
+        width: 80%;
+        border-radius: 12px;
+        padding: 30px 20px;
+        margin: 15px auto;
+    }
+
+    .donation-section::before {
+        border-radius: 11px;
+    }
+
+
+    .donation-content h2 {
+        font-size: 1.2rem;
     }
 
     .donation-content {
         text-align: center;
+    }
+
+    .donate-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 
@@ -989,18 +1202,19 @@ header {
 
 .rich-container {
     width: 100%;
-    align-items: stretch;
     display: flex;
-    gap: 65px 10px;
+    flex-direction: row;
+    gap: 30px 20px;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    flex: 0 0 40px;
+    align-items: stretch;
 }
 
 .rich-card-container {
-    background-color: #212121;
+    flex: 1 1 150px;
+    background-color: #181818;
     border-radius: 10px;
-    border: 1px solid #505050;
+    border: 1px solid #363636;
     padding: 20px;
 }
 
@@ -1011,10 +1225,42 @@ header {
 .rich-card-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
     color: var(--text-color);
+    align-items: center;
     text-align: center;
+}
+
+.rich-card-content p::after {
+    font-size: inherit;
+    color: inherit;
+    background-color: inherit;
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: inherit;
+    top: 0;
+    left: 0;
+    text-align: center;
+    border-radius: 9px;
+    box-sizing: border-box;
+}
+
+.aa::after {
+    content: "C14 | Fiat to Crypto";
+}
+
+.bb::after {
+    content: "$Rich on First Ledger";
+}
+
+.cc::after {
+    content: "$Rich on Magnetic";
+}
+
+.dd::after {
+    content: "Tripper - Faucet";
 }
 
 .rich-card-content img {
@@ -1025,13 +1271,27 @@ header {
     transition: transform 300ms ease-in-out;
 }
 
+@media screen and (max-width: 500px) {
+    .rich-card-container {
+        padding: 10px;
+    }
 
+    .rich-card-content img {
+        width:
+            40px;
+    }
+
+    .rich-card-content p {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
 
 
 /* Assuming you have a style.css file or a similar main stylesheet */
 
 footer {
-    background-color: #141414;
+    background-color: #111214;
     color: #e0e0e0;
     padding: 40px 20px;
 }
@@ -1079,6 +1339,7 @@ footer {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
+    width: 80%;
 }
 
 .social-links a {
@@ -1094,7 +1355,6 @@ footer {
 
 .social-links img {
     width: 24px;
-    /* Adjust icon size as needed */
     height: auto;
     vertical-align: middle;
 }
@@ -1190,22 +1450,28 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+    .footer-logo,
+    .copyright {
+        margin: 20px auto;
+    }
+
     .footer-container {
-        flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: left;
+        gap: 40px;
     }
 
     .footer-left,
     .footer-nav,
     .newsletter {
         width: 100%;
-        text-align: center;
+        text-align: left;
         margin-bottom: 30px;
     }
 
     .social-links {
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .newsletter form {
@@ -1215,5 +1481,17 @@ footer {
 
     .newsletter .subscribe-btn {
         width: 100%;
+    }
+
+    .outline {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-container {
+        align-items: center;
+        text-align: left;
+        gap: 20px;
     }
 }

@@ -11,9 +11,11 @@
     <title>$RICH - Wealth is a Mindset</title>
     <link rel="shortcut icon" href="../client/assets/public/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./assets/js/scrollReveal.js"></script>
 </head>
 
-<body  >
+<body>
     <div class="nav-container">
         <div id="close">
             <span></span><span></span>
@@ -24,6 +26,8 @@
             <li><a href="#contact">Contact us</a></li>
         </ul>
     </div>
+    <div class="background header-background">
+    </div>
     <header class="site-header">
         <nav>
             <div class="logo"><span>$</span>RICH</div>
@@ -32,20 +36,20 @@
                 <li><a href="#legal">Legal</a></li>
                 <li><a href="#contact" class="contact-btn">Contact us</a></li>
             </ul>
-        <div id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+            <div id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <p class="tagline"><span><img src="./assets/public/cash-icon.svg" alt="image of a bag of cash"></span> Enter
-                the Realm of digital reality</p>
+            <div class="amd"><p class="tagline"><span><img src="./assets/public/cash-icon.svg" alt="image of a bag of cash"></span> Enter
+                the Realm of digital reality</p></div>
             <h1>Wealth is a mindset,<br><span>not just a coin – a code.</span></h1>
             <div class="cta-buttons">
-                <a href="#mint" class="btn primary">Mint Your Legacy with $RICH</a>
-                <a href="#litepaper" class="btn secondary">Download Litepaper</a>
+                <a href="#mint" class="btn primary">Join the community</a>
+                <a href="#litepaper" class="btn secondary">Donate</a>
             </div>
         </section>
 
@@ -62,9 +66,15 @@
                                 alt="logo of a golden bot"></span>
                     </div>
                     <p class="rich-card-description">
-                        $RICH a community coin dedicated to the trade industry, bridging Web 2 and Web 3 through
-                        the power of memes, community, and AI. We're building a space where meme culture meets
-                        the trade world, bringing hardworking individuals together for fun and recognition.
+                        $Rich, built on the efficient XRP Ledger, is more than a cryptocurrency; it's a cultural
+                        movement embodying a new era of
+                        digital, self-earned wealth for grinders and visionaries. Eschewing artificial hype and VC
+                        influence, $Rich offers a
+                        clean, powerful, and minimal aesthetic, represented by its black-and-gold branding. With a
+                        fixed, deflationary supply of
+                        98.8 million tokens, $Rich empowers a strong, conviction-driven community focused on real value
+                        and independent success.
+                        It's a badge of digital independence, representing ownership and results.
                     </p>
                     <div class="rich-card-read-more"><a href="#">Read-more <span><img
                                     src="./assets/public/read-more-icon.svg" alt="read more icon"></span></a></div>
@@ -75,7 +85,7 @@
         </section>
 
         <section id="tokenomics" class="tokenomics-section">
-            <h2 class="tokenomics-title">Understanding $RICH Tokenomics</h2>
+            <h2 class="tokenomics-title">$RICH Tokenomics</h2>
             <div class="tokenomics-content">
                 <div class="tokenomics-left">
                     <div class="tokenomics-diagram" aria-label="Token Distribution Diagram">
@@ -194,7 +204,8 @@
                         </svg>
                     </div>
                     <div class="tokenomics-address" aria-label="Contract Address">
-                        <span class="address-text" value="rfxTVqvjmjnHADMCGjZw8Naye">rfxTVqvjmjnHADMCGjZw8Naye</span>
+                        <span class="address-text"
+                            value="rHbC5idsp7Tv2F5gfLceFueFLtEof5gpg7">rHbC5idsp7Tv2F5gfLceFueFLtEof5gpg7</span>
                         <button class="copy-button" aria-label="Copy Contract Address" id="textToCopy" value="">
                             <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1.2em; height: 1.2em;"
                                 aria-hidden="true">
@@ -207,28 +218,31 @@
                 <div class="tokenomics-right">
                     <div class="tokenomics-tabs" role="tablist">
                         <button class="tab-button" id="tab-button1" role="tab" aria-selected="true"
-                            aria-controls="developers-fund">Developers Fund</button>
+                            aria-controls="developers-fund">Token Allocation</button>
                         <button class="tab-button" id="tab-button2" role="tab" aria-selected="false"
-                            aria-controls="open-market">Open
-                            market</button>
+                            aria-controls="open-market">Humanitarian Impact</button>
                         <span id="tab-button-highlight"></span>
                     </div>
                     <div class="tokenomics-container" id="token-container">
                         <div id="developers-fund" role="tabpanel" aria-labelledby="developers-fund"
                             class="tab-content active">
                             <p class="tokenomics-description">
-                                These tokens are reserved to support ongoing development,
-                                future enhancements, and operational costs essential to the
-                                growth and maintenance of the SLIFT ecosystem. This
-                                allocation ensures that the project has a steady resource pool
-                                to fund innovation, security, and overall project health.
+                                $Rich token allocation strategically balances ecosystem growth and real-world impact:
+                                <span>41% Liquidity Pool ensures</span> stable
+                                trading. <span>21% Developer Funds</span> drive innovation. <span>10% Community
+                                    Incentives</span> reward holders (airdrops, staking). 7% Marketing
+                                & Partnerships expand reach. <span>6% Treasury/Reserves</span> provide flexibility.
                             </p>
                         </div>
                         <div id="open-market" role="tabpanel" aria-labelledby="open-market" class="tab-content">
                             <p class="tokenomics-description">
-                                Information about the tokens allocated for the open market,
-                                including initial distribution, liquidity provision, and
-                                potential future uses.
+                                <span>15%</span> of $Rich powers our Humanitarian Fund, directly impacting <span>clean
+                                    water initiatives,
+                                    emergency response efforts, child
+                                    sponsorship & education programs</span> and <span>animal welfare
+                                    organizations</span>. Invest in $Rich and
+                                contribute to meaningful global
+                                change.
                             </p>
                         </div>
                     </div>
@@ -239,39 +253,40 @@
         <section class="roadmap">
             <div class="roadmap-header">
                 <h2>Roadmap</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ratione aliquid animi et beatae ipsa
-                    vitae ne
+                <p>Building a Vibrant Ecosystem with Real-World Impact
 
                 </p>
             </div>
             <div class="card-container-wrapper">
                 <ul class="card-container">
                     <li class="card">
-                        <span></span>
-                        <h3>Colaborative community</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ipsam, hic deserunt
-                            ipsa iure ea praesentium ducimus qia vitae odio?</p>
+                        <span><img src="./assets/public/unlock.png" alt="unlock icon"></span>
+                        <h3>Phase 1: Exclusive $Rich Lifestyle NFTs</h3>
+                        <p>Unlock premium content, unique perks, and private community access with our limited-edition
+                            NFTs. Join an elite network
+                            and experience the full $Rich ecosystem benefits.</p>
                     </li>
                     <li class="card">
-                        <span></span>
-                        <h3>Colaborative community</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ipsam, hic deserunt
-                            ipsa iure ea
-                            praesentium ducimus qia vitae odio?</p>
+                        <span><img src="./assets/public/giving.png" alt="giving icon"></span>
+                        <h3>Phase 2: Launching the $Rich Humanitarian Fund</h3>
+                        <p>We're making a real-world difference by dedicating resources to crisis aid, supporting
+                            children's futures, and
+                            championing animal welfare initiatives globally. Invest in impact with $Rich..</p>
                     </li>
                     <li class="card">
-                        <span></span>
-                        <h3>Colaborative community</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ipsam, hic deserunt
-                            ipsa iure ea
-                            praesentium ducimus qia vitae odio?</p>
+                        <span><img src="./assets/public/megaphone.png" alt="megaphone icom"></span>
+                        <h3>Phase 3: "Stay $Rich" Media & Influencer Campaign:</h3>
+                        <p>Expanding our reach and amplifying the $Rich message through strategic media partnerships and
+                            collaborations with key
+                            influencers across the crypto space. Join the movement.</p>
                     </li>
                     <li class="card">
-                        <span></span>
-                        <h3>Colaborative community</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo perspiciatis ipsam, hic deserunt
-                            ipsa iure ea
-                            praesentium ducimus qia vitae odio?</p>
+                        <span><img src="./assets/public/community.png" alt="community icon"></span>
+                        <h3>Phase 4: $Rich Community Grant Pool Activation:</h3>
+                        <p>Empowering our talented creators, dedicated contributors, and innovative builders within the
+                            $Rich ecosystem with
+                            financial support to fuel growth and development. Shape the future of $Rich.
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -362,13 +377,14 @@
 
         <section class="donation-section">
             <div class="donation-content">
-                <h2>We aim to empower creators to bring their ideas to life, enhance their skills, and
-                    contribute valuable content to the community.</h2>
-                <p class="support-text">We provide support for aspiring content creators who want to share their own DIY
-                    projects but need some help getting started. Our donation initiative is designed for those who are
-                    passionate about creating and sharing their projects but may require assistance with remodeling
-                    costs or
-                    equipment purchases.</p>
+                <h2>$Rich Humanitarian Fund: NFTs Creating Real-World Impact Through Crisis Aid, Children's Futures, and
+                    Animal Welfare</h2>
+                <p class="support-text">Join the $Rich community in building a legacy of impact. Our Humanitarian Fund
+                    leverages the power of NFTs to fuel hope
+                    and healing by directly supporting crisis aid, nurturing children's futures, and championing animal
+                    welfare. Donate
+                    boldly and become part of a global movement where real wealth creates real change. Stay $Rich and
+                    make a difference.</p>
                 <div>
                     <a href="/donate" class="donate-button">Donate</a>
                 </div>
@@ -382,38 +398,38 @@
                 <a href="#" class="rich-card-container">
                     <div>
                         <div class="rich-card-content">
-                            <img src="./assets/public/cash-icon.svg" alt="C14 Icon">
-                            <p>C14 | Fiat to Crypto</p>
+                            <img src="./assets/public/card-2.svg" alt="C14 Icon">
+                            <p class="aa">C14 | Fiat to Crypto</p>
                         </div>
                     </div>
                 </a>
                 <a href="#" class="rich-card-container">
                     <div>
                         <div class="rich-card-content">
-                            <img src="./assets/public/cash-icon.svg" alt="C14 Icon">
-                            <p>C14 | Fiat to Crypto</p>
+                            <img src="./assets/public/magnet.svg" alt="C14 Icon">
+                            <p class="bb">$Rich on First Ledger</p>
                         </div>
                     </div>
                 </a>
                 <a href="#" class="rich-card-container">
                     <div>
                         <div class="rich-card-content">
-                            <img src="./assets/public/cash-icon.svg" alt="C14 Icon">
-                            <p>C14 | Fiat to Crypto</p>
+                            <img src="./assets/public/tag.svg" alt="C14 Icon">
+                            <p class="cc">$Rich on Magnetic</p>
                         </div>
                     </div>
                 </a><a href="#" class="rich-card-container">
                     <div>
                         <div class="rich-card-content">
-                            <img src="./assets/public/cash-icon.svg" alt="C14 Icon">
-                            <p>C14 | Fiat to Crypto</p>
+                            <img src="./assets/public/card.svg" alt="C14 Icon">
+                            <p class="dd">Tripper - Faucet</p>
                         </div>
                     </div>
                 </a>
             </div>
         </section>
     </main>
-    <a href="#to-top" class="to-top"></a>
+    <a href="#to-top" class="to-top"><img src="./assets/public/up.png" alt="up icon"></a>
 
     <footer>
         <div class="footer-logo"><span>$</span>RICH</div>
@@ -426,16 +442,14 @@
                     playing the long game, and living above the noise.
                 </p>
                 <ul class="social-links" aria-label="Social Media Links">
-                    <li><a href="#" aria-label="Discord"><img src="./assets/public/discord-icon.svg" alt="Discord"></a>
+                    <li><a href="#" aria-label="Discord"><img src="./assets/public//discord.svg" alt="Discord"></a>
                     </li>
-                    <li><a href="#" aria-label="LinkedIn"><img src="./assets/public/linkedin-icon.svg"
-                                alt="LinkedIn"></a>
+                    <li><a href="#" aria-label="LinkedIn"><img src="./assets/public/linkedin.svg" alt="LinkedIn"></a>
                     </li>
-                    <li><a href="#" aria-label="X (Twitter)"><img src="./assets/public/x-icon.svg"
+                    <li><a href="#" aria-label="X (Twitter)"><img src="./assets/public/twitter.svg"
                                 alt="X (Twitter)"></a>
                     </li>
-                    <li><a href="#" aria-label="Telegram"><img src="./assets/public/telegram-icon.svg"
-                                alt="Telegram"></a>
+                    <li><a href="#" aria-label="Telegram"><img src="./assets/public/telegram.svg" alt="Telegram"></a>
                     </li>
                 </ul>
             </div>
