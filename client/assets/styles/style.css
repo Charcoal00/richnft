@@ -185,7 +185,7 @@ header {
 
     .active main,
     .active .site-header {
-        filter: blur(1px);
+        filter: blur(2px);
     }
 
     .nav-links {
