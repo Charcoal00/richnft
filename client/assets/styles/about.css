@@ -1,8 +1,8 @@
 /* Basic Resets & Variables */
 :root {
-    --dark-bg: #101215aa;
-    --form-bg: #2e2e2e53;
-    --text-color: #E0E0E0;
+    --dark-bg: #1b1d21d5;
+    --form-bg: #49494987;
+    /* --text-color: #E0E0E0; */
     --placeholder-color: #999;
     --border-color: #444;
     --button-bg: #4A90E2;
@@ -35,7 +35,7 @@
 
 .span-span {
     /* border: 1px solid #303030; */
-    background-color: #1A1A1A;
+    background-color: #3f3f3f;
     padding: 5px 20px;
     border-radius: 10px;
     margin-bottom: 40px;
@@ -142,6 +142,7 @@ textarea {
     -moz-appearance: none;
     cursor: pointer;
     font-family: var(--font1);
+        width: 40%;
 
 }
 
