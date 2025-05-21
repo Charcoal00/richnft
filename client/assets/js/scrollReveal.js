@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
     sr.reveal(".hero h1, .tokenomics-diagram", {
-        scale: 0.8,
+        scale: 0.6,
         duration: 1000,
         ease: "ease",
     });

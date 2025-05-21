@@ -9,21 +9,21 @@
     <meta name="keywords" content="SRICH, crypto, NFT, blockchain, tokenomics, Web3, faucet, XRPL" />
     <meta name="author" content="SRICH Team" />
     <title>$RICH - Wealth is a Mindset</title>
-    <link rel="shortcut icon" href="../client/assets/public/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/public/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./assets/js/scrollReveal.js"></script>
 </head>
 
 <body>
-    <div class="nav-container">
+    <div class="nav-container" id="nav-container">
         <div id="close">
             <span></span><span></span>
         </div>
         <ul class="nav-links2">
-            <li><a href="#about">About</a></li>
-            <li><a href="#legal">Legal</a></li>
-            <li><a href="#contact">Contact us</a></li>
+            <li><a href="about/">About</a></li>
+            <li><a href="donate/">Donate</a></li>
+            <li><a href="contact-us/">Contact us</a></li>
         </ul>
     </div>
     <div class="background header-background">
@@ -32,9 +32,9 @@
         <nav>
             <div class="logo"><span>$</span>RICH</div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#legal">Legal</a></li>
-                <li><a href="#contact" class="contact-btn">Contact us</a></li>
+                <li><a href="about/">About</a></li>
+                <li><a href="donate/">Donate</a></li>
+                <li><a href="contact-us/" class="contact-btn">Contact us</a></li>
             </ul>
             <div id="hamburger">
                 <span></span><span></span><span></span>
@@ -49,7 +49,7 @@
             <h1>Wealth is a mindset,<br><span>not just a coin – a code.</span></h1>
             <div class="cta-buttons">
                 <a href="#mint" class="btn primary">Join the community</a>
-                <a href="#litepaper" class="btn secondary">Donate</a>
+                <a href="donate/" class="btn secondary">Donate</a>
             </div>
         </section>
 
@@ -76,7 +76,7 @@
                         and independent success.
                         It's a badge of digital independence, representing ownership and results.
                     </p>
-                    <div class="rich-card-read-more"><a href="#">Read-more <span><img
+                    <div class="rich-card-read-more"><a href="about/">Read-more <span><img
                                     src="./assets/public/read-more-icon.svg" alt="read more icon"></span></a></div>
                 </div>
 
@@ -204,9 +204,8 @@
                         </svg>
                     </div>
                     <div class="tokenomics-address" aria-label="Contract Address">
-                        <span class="address-text"
-                            value="rHbC5idsp7Tv2F5gfLceFueFLtEof5gpg7">rHbC5idsp7Tv2F5gfLceFueFLtEof5gpg7</span>
-                        <button class="copy-button" aria-label="Copy Contract Address" id="textToCopy" value="">
+                        <span class="address-text">rHbC5idsp7Tv2F5gfLceFueFLtEof5gpg7</span>
+                        <button class="copy-button" aria-label="Copy Contract Address" id="copyButton">
                             <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1.2em; height: 1.2em;"
                                 aria-hidden="true">
                                 <path
@@ -386,7 +385,7 @@
                     boldly and become part of a global movement where real wealth creates real change. Stay $Rich and
                     make a difference.</p>
                 <div>
-                    <a href="/donate" class="donate-button">Donate</a>
+                    <a href="donate/" class="donate-button">Donate</a>
                 </div>
             </div>
         </section>
@@ -430,6 +429,9 @@
         </section>
     </main>
     <a href="#to-top" class="to-top"><img src="./assets/public/up.png" alt="up icon"></a>
+    <div id="copyMessage" class="copyMessage hhidden">
+        Wallet address copied!
+    </div>
 
     <footer>
         <div class="footer-logo"><span>$</span>RICH</div>
@@ -469,6 +471,8 @@
         <span class="outline">$RICH</span>
     </footer>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/copy.js"></script>
+    <script src="./assets/js/road-map.js"></script>
 </body>
 
 </html>

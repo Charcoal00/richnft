@@ -1,0 +1,294 @@
+/* Basic Resets & Variables */
+:root {
+    --dark-bg: #1A1A1A;
+    --form-bg: #2C2C2C;
+    --text-color: #E0E0E0;
+    --placeholder-color: #999;
+    --border-color: #444;
+    --button-bg: #4A90E2;
+    --button-hover-bg: #357ABD;
+    --highlight-color: #F8D300;
+    --padding-mobile: 20px;
+    --padding-desktop: 80px;
+    --max-width: 1200px;
+}
+
+
+
+
+.header {
+    width: 100%;
+    padding: 20px var(--padding-mobile);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(26, 26, 26, 0.8);
+    /* Slightly transparent */
+    backdrop-filter: blur(5px);
+    /* Frosted glass effect */
+}
+
+.navbar {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contact-button {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: var(--form-bg);
+    border-color: var(--text-color);
+}
+
+
+/* Main Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically on mobile */
+    justify-content: center;
+    align-items: center;
+    /* Center items horizontally */
+    gap: 40px;
+    /* Space between text and form */
+    padding: 100px var(--padding-mobile) 50px;
+    /* Adjust padding for header */
+    max-width: var(--max-width);
+    margin: 0 auto;
+    /* Center the section on larger screens */
+    flex-grow: 1;
+    /* Allows it to take up available space */
+}
+
+.contact-info {
+    text-align: center;
+    /* Center text on small screens */
+    width: 100%;
+}
+
+.main-heading {
+    font-size: 2.5em;
+    /* Larger for impact */
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+    /* Ensures text is centered */
+}
+
+.highlight {
+    color: var(--highlight-color);
+}
+
+/* Form Container & Form */
+.contact-form-container {
+    background-color: var(--dark-bg);
+    /* Use dark-bg for the overall form container */
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    /* Full width on small screens */
+    max-width: 500px;
+    /* Max width for the form itself */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow */
+    border: 1px solid var(--border-color);
+    /* Subtle border matching the image */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    flex-direction: column;
+    /* Stack on mobile */
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    /* Allows items in row to grow */
+    position: relative;
+    /* For accessibility (sr-only labels) */
+}
+
+/* Screen reader only for labels */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 15px 12px;
+    background-color: var(--form-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--placeholder-color);
+    opacity: 0.8;
+    /* Adjust opacity as needed */
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    /* Allow vertical resizing only */
+    min-height: 100px;
+    /* Minimum height for message box */
+}
+
+.phone-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.phone-input-group select {
+    background-color: var(--form-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    padding: 15px 12px;
+    font-size: 16px;
+    outline: none;
+    appearance: none;
+    /* Remove default select arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+   
+}
+
+.phone-input-group select:focus {
+    border-color: var(--button-bg);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
+}
+
+.phone-input-group input[type="tel"] {
+    flex-grow: 1;
+    /* Takes up remaining space */
+}
+
+.submit-button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    /* Full width button */
+}
+
+.submit-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+/* Footer (Optional) */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--placeholder-color);
+    font-size: 0.9em;
+    margin-top: auto;
+    /* Pushes footer to the bottom */
+}
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .contact-section {
+        flex-direction: row;
+        /* Side-by-side on larger screens */
+        text-align: left;
+        /* Align text to left */
+        gap: 80px;
+        /* More space between text and form */
+        padding: 120px var(--padding-desktop) 80px;
+    }
+
+    .contact-info {
+        text-align: left;
+        flex: 1;
+        /* Allow it to take up space */
+        max-width: 50%;
+        /* Control width */
+    }
+
+    .main-heading {
+        font-size: 3.5em;
+        /* Even larger on desktop */
+        text-align: left;
+    }
+
+    .contact-form-container {
+        flex: 1;
+        /* Allow it to take up space */
+        max-width: 500px;
+        /* Keep max width for form */
+    }
+
+    .form-group-row {
+        flex-direction: row;
+        /* Display side-by-side */
+    }
+
+    .header {
+        padding: 20px var(--padding-desktop);
+    }
+}
+
+/* Very large screens */
+@media (min-width: 1200px) {
+    .main-heading {
+        font-size: 4em;
+    }
+}
