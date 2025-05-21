@@ -27,8 +27,6 @@
             <li><a href="../contact-us/">Contact us</a></li>
         </ul>
     </div>
-    <div class="background header-background">
-    </div>
     <header class="site-header">
         <nav>
             <div class="logo"><span>$</span>RICH</div>
@@ -44,11 +42,12 @@
     </header>
     <main class="contact-section">
         <div class="contact-info">
-            <h1 class="main-heading">Join the <span class="highlight">$RICH</span> Community and Shape the Future</h1>
+            <span class="span-span">Contact Us</span>
+            <h1 class="main-heading"><span class="highlight">Join the $RICH</span> Community and Shape the Future</h1>
         </div>
 
         <div class="contact-form-container">
-            <form action="#" method="POST" class="contact-form">
+            <form id="contactForm" method="POST" class="contact-form">
                 <div class="form-group-row">
                     <div class="form-group">
                         <label for="firstName" class="sr-only">First Name</label>
@@ -84,6 +83,8 @@
                 </div>
 
                 <button type="submit" class="submit-button">Send</button>
+
+                <p id="responseMessage"></p>
             </form>
         </div>
     </main>
@@ -126,6 +127,7 @@
         <span class="outline">$RICH</span>
     </footer>
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/formSubmission.js"></script>
 </body>
 
 </html>

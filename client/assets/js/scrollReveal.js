@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sr.reveal(".footer-logo", {
         origin: "top",
         delay: 1000,
-        distance:"20%",
+        distance: "20%",
     });
     sr.reveal(
         ".footer-logo, .footer-tagline, .social-links, .footer-links li, .newsletter h3, .newsletter .subscribe-btn, .copyright",
@@ -95,4 +95,22 @@ document.addEventListener("DOMContentLoaded", () => {
             interval: 300,
         }
     );
+    sr.reveal(".span-span, main-heading", {
+        origin: "left",
+        distance: "20%",
+        interval: 200,
+    });
+    sr.reveal(".main-heading, .contact-form-container", {
+        origin: "center",
+        distance: "0%",
+        scale: 0.8,
+        delay: 1200,
+    });
+     sr.reveal(".sr-only, input, .phone-input-group select, textarea", {
+         origin: "top",
+         distance: "10%",
+         interval: 200,
+         delay: 2000,
+     });
+    
 });

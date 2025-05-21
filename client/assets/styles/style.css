@@ -1404,7 +1404,6 @@ footer {
 
 .newsletter .subscribe-btn {
     text-align: center;
-    width: 20%;
     background-color: var(--primary-color);
     color: #141414;
     border: none;
@@ -1480,7 +1479,7 @@ footer {
     }
 
     .newsletter .subscribe-btn {
-        width: 100%;
+        width: clamp(150px, 20%, 300px);
     }
 
     .outline {
