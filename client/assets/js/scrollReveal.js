@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
          delay: 2000,
      });
      sr.reveal(
-         ".content-wrapper div, .content-wrapper p, our-vision-box, .blockchain h2, .blockchain p, .blockchain li",
+         ".content-wrapper div, .content-wrapper p, .our-vision-box, .blockchain h2, .blockchain p, .blockchain li",
          {
              origin: "top",
              distance: "10%",

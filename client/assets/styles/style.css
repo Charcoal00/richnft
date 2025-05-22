@@ -65,15 +65,28 @@ header {
 .header-background {
     z-index: -1;
     width: 100%;
-    height: 130vh;
+    height: 150vh;
     position: absolute;
     top: 0;
     left: 0%;
-    /* transform: translateX(20%); */
     background-position: 10vw 0px !important;
     background-image: url("../public/background.svg");
 }
 
+.tokennomics-background {
+    height: 500px;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: -55%;
+    right: -10%;
+    background-image: url('../public/background.svg');
+    background-position: 50vw 0px !important;
+}
+.roadmapppp{
+    background-position: -40vw 0px !important;
+    left: -10%;
+}
 .site-header nav {
     display: flex;
     justify-content: space-between;
@@ -121,9 +134,10 @@ header {
     color: var(--primary-color);
 }
 
-.nav-links2 li{
+.nav-links2 li {
     margin: 10px 0;
 }
+
 .nav-links2 a {
     padding: 30px 20px;
 }
@@ -395,8 +409,6 @@ header {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
-    background-color: #0a0a0a;
-    /* Darker background */
 }
 
 .rich-card {
@@ -487,10 +499,10 @@ header {
 }
 
 .tokenomics-section {
+    position: relative;
     padding: 50px 0;
     width: 90%;
     margin: 0 auto;
-    background-color: #0a0a0a;
     color: #e0e0e0;
     text-align: center;
 }
@@ -976,6 +988,12 @@ p.tokenomics-description span {
 
 
 /* nft product  */
+.nft-market{
+    position: relative;
+}
+.nft-market .tokennomics-background{
+    top: 0%;
+}
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1197,12 +1215,13 @@ p.tokenomics-description span {
 
 
 .rich-section {
+    position: relative;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    margin: 60px auto;
+    margin: 60px auto 100px;
 }
 
 .rich-container {
@@ -1299,7 +1318,9 @@ footer {
     background-color: #111214;
     color: #e0e0e0;
     padding: 40px 20px;
+    position: relative;
 }
+
 
 .footer-container {
     width: 90%;
@@ -1515,6 +1536,7 @@ footer {
     transform: translateX(-50%);
     transition: opacity 0.3s ease-in-out, bottom 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
+
 .hhidden {
     opacity: 0;
     visibility: hidden;
