@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="../assets/styles/style.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="../assets/js/scrollReveal.js"></script>
+    <style>
+        .donation-content div {
+            width: clamp(270px, 70%, 400px);
+            justify-content: space-between;
+            margin: 20px auto;
+        }
+
+        .donation-content h2 {
+            font-size: 2rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            .donation-content div {
+                margin: 20px auto 20px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -21,6 +38,7 @@
             <span></span><span></span>
         </div>
         <ul class="nav-links2">
+            <li><a href="../index.html">Home</a></li>
             <li><a href="../about/">About</a></li>
             <li><a href="../donate/">Donate</a></li>
             <li><a href="../contact-us/">Contact us</a></li>
@@ -32,6 +50,7 @@
         <nav>
             <a href="../index.html" class="logo"><span>$</span>RICH</a>
             <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="../about/">About</a></li>
                 <li><a href="../donate/">Donate</a></li>
                 <li><a href="../contact-us/" class="contact-btn">Contact us</a></li>
@@ -42,9 +61,33 @@
         </nav>
     </header>
     <main>
-
+        <section class="donation-section">
+            <div class="donation-content">
+                <h2>Donate</h2>
+                <p class="support-text">Join the $Rich community in building a legacy of impact. Our Humanitarian Fund
+                    leverages the power of NFTs to fuel hope
+                    and healing by directly supporting crisis aid, nurturing children's futures, and championing animal
+                    welfare. Donate
+                    boldly and become part of a global movement where real wealth creates real change. Stay $Rich and
+                    make a difference.</p>
+                <div class="tokenomics-address" aria-label="Contract Address">
+                    <span class="address-text">rHbC5idsp7Tv2F5gfLceFueFLtEof5gpg7</span>
+                    <button class="copy-button" aria-label="Copy Contract Address" id="copyButton">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="width: 1.2em; height: 1.2em;"
+                            aria-hidden="true">
+                            <path
+                                d="M16 1H4a2 2 0 00-2 2v14h2V3h12V1zm3 4H8a2 2 0 00-2 2v14a2 2 0 002 2h11a2 2 0 002-2V7a2 2 0 00-2-2zm0 16H8V7h11v14z" />
+                        </svg>
+                    </button>
+                </div>
+                <p>Donate to the Wallet address</p>
+            </div>
+        </section>
     </main>
     <a href="#to-top" class="to-top"><img src="../assets/public/up.png" alt="up icon"></a>
+    <div id="copyMessage" class="copyMessage hhidden">
+        Wallet address copied!
+    </div>
     <footer>
         <div class="footer-logo"><span>$</span>RICH</div>
 
@@ -68,11 +111,14 @@
                 </ul>
             </div>
             <nav class="footer-nav" aria-label="Footer Navigation">
-                <ul class="footer-links">
-                    <li><a href="../about/" title="Learn more about $RICH">About us</a></li>
-                    <li><a href="../donate/" title="Legal information and documents">Donate</a></li>
-                    <li><a href="../contact/" title="Contact the $RICH team">Contact us</a></li>
-                </ul>
+                <nav class="footer-nav" aria-label="Footer Navigation">
+                    <ul class="footer-links">
+                        <li><a href="../index.html" title="home page">Home</a></li>
+                        <li><a href="../about/" title="Learn more about $RICH">About us</a></li>
+                        <li><a href="../donate/" title="Legal information and documents">Donate</a></li>
+                        <li><a href="../contact/" title="Contact the $RICH team">Contact us</a></li>
+                    </ul>
+                </nav>
             </nav>
             <div class="newsletter">
                 <h3>Join the community</h3>
@@ -83,6 +129,7 @@
         <span class="outline">$RICH</span>
     </footer>
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/copy.js"></script>
 </body>
 
 </html>

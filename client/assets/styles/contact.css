@@ -1,0 +1,223 @@
+/* Basic Resets & Variables */
+:root {
+    --dark-bg: #1b1d21d5;
+    --form-bg: #49494987;
+    /* --text-color: #E0E0E0; */
+    --placeholder-color: #999;
+    --border-color: #444;
+    --button-bg: #4A90E2;
+    --button-hover-bg: #357ABD;
+}
+
+
+
+
+
+
+
+/* Main Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 90%;
+    margin: 80px auto;
+    flex-grow: 1;
+}
+
+.contact-info {
+    text-align: center;
+    /* Center text on small screens */
+    width: 100%;
+}
+
+.span-span {
+    background-color: #3f3f3f;
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+.main-heading {
+    font-size: 2.5em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #7e7e7e;
+}
+
+.highlight {
+    color: var(--text-color);
+}
+
+/* Form Container & Form */
+.contact-form-container {
+    background-color: var(--dark-bg);
+    padding: 30px 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-row {
+    display: flex;
+    flex-direction: column;
+    /* Stack on mobile */
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    /* Allows items in row to grow */
+    position: relative;
+    /* For accessibility (sr-only labels) */
+}
+
+/* Screen reader only for labels */
+.sr-only {
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    font-family: var(--font1);
+    width: 100%;
+    padding: 15px 12px;
+    background-color: var(--form-bg);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--placeholder-color);
+    opacity: 0.8;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgba(215, 215, 16, 0.592);
+}
+
+textarea {
+    resize: vertical;
+    /* Allow vertical resizing only */
+    min-height: 100px;
+    /* Minimum height for message box */
+}
+
+.phone-input-group {
+    display: flex;
+}
+
+.phone-input-group select {
+    background-color: rgb(65, 65, 65);
+    border: 1px solid transparent;
+    border-radius: 5px 0 0 5px;
+    color: var(--text-color);
+    padding: 15px 12px;
+    font-size: 16px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    font-family: var(--font1);
+        width: 40%;
+
+}
+
+.phone-input-group select:focus {
+    border-color: rgba(215, 215, 16, 0.592);
+}
+
+.phone-input-group input[type="tel"] {
+    flex-grow: 1;
+    border-radius: 0 5px 5px 0;
+}
+
+.submit-button {
+    background-color: #303030;
+    color: var(--text-color);
+    padding: 15px 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    font-family: var(--font1);
+}
+
+.submit-button:hover {
+    background-color: rgba(255, 255, 0, 0.075);
+    transform: translateY(-1px);
+}
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .contact-section {
+        flex-direction: row;
+        align-items: start;
+        text-align: left;
+        gap: 50px;
+        padding: 120px var(--padding-desktop) 80px;
+    }
+
+    .contact-info {
+        text-align: left;
+        flex: 1;
+    }
+
+    .main-heading {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .contact-form-container {
+        flex: 1;
+                max-width: 50%;
+    }
+
+    .form-group-row {
+        flex-direction: row;
+    }
+
+    .header {
+        padding: 20px var(--padding-desktop);
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-heading {
+        font-size: 3em;
+    }
+        .contact-section{
+            gap: 100px;
+        }
+}
+#responseMessage{
+    font-family: var(--font1);
+    color: rgba(255, 255, 0, 0.572);
+    font-weight: 100;
+}

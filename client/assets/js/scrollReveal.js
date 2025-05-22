@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         distance: "30%",
         interval: 500,
     });
-    sr.reveal(".tokenomics-container", {
+    sr.reveal(".tokenomics-, .content-wrapper h1", {
         origin: "center",
         distance: "0%",
         scale: 0.9,
@@ -112,5 +112,23 @@ document.addEventListener("DOMContentLoaded", () => {
          interval: 200,
          delay: 2000,
      });
+     sr.reveal(
+         ".content-wrapper div, .content-wrapper p, our-vision-box, .blockchain h2, .blockchain p, .blockchain li",
+         {
+             origin: "top",
+             distance: "10%",
+             interval: 300,
+             delay: 1200,
+         }
+     );
+     sr.reveal(".content-wrapper p", {
+         origin: "bottom",
+     });
+
+     sr.reveal(".vision-content .image-content", {
+         origin: "right",
+         scale: 0.8,
+     });
+     
     
 });

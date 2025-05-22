@@ -1,224 +1,211 @@
-/* Basic Resets & Variables */
-:root {
-    --dark-bg: #1b1d21d5;
-    --form-bg: #49494987;
-    /* --text-color: #E0E0E0; */
-    --placeholder-color: #999;
-    --border-color: #444;
-    --button-bg: #4A90E2;
-    --button-hover-bg: #357ABD;
+.header-background {
+    background-image: url('../public/galaxy.svg');
+    background-position: center !important;
+    filter: saturate(20%);
 }
 
-
-
-
-
-
-
-/* Main Contact Section */
-.contact-section {
+.content-wrapper {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 40px;
-    width: 90%;
-    margin: 80px auto;
-    flex-grow: 1;
+    align-items: stretch;
 }
 
-.contact-info {
+/* About Us Section */
+.about-us-section {
     text-align: center;
-    /* Center text on small screens */
-    width: 100%;
+    padding: 30px 0 100px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
-.span-span {
-    /* border: 1px solid #303030; */
-    background-color: #3f3f3f;
-    padding: 5px 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
+.about-us-section::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: 0px;
+    left: 0;
+    background: linear-gradient(to left, transparent, #727272ab, transparent);
+}
+
+.about-us-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    line-height: 1.2;
     display: inline-block;
 }
 
-.main-heading {
-    font-size: 2.5em;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #7e7e7e;
+.about-us-section h1 span {
+    display: inline-block;
+    transform: rotate(-4deg);
+    padding: 7px 18px;
+    font-size: 0.6em;
+    background: linear-gradient(to right, #cabb12, rgb(148, 126, 48));
+    border-radius: 5px;
 }
 
-.highlight {
+.about-us-section p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto;
     color: var(--text-color);
+    opacity: 0.9;
 }
 
-/* Form Container & Form */
-.contact-form-container {
-    background-color: var(--dark-bg);
-    padding: 30px 20px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--border-color);
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group-row {
-    display: flex;
-    flex-direction: column;
-    /* Stack on mobile */
-    gap: 20px;
-}
-
-.form-group {
-    flex: 1;
-    /* Allows items in row to grow */
-    position: relative;
-    /* For accessibility (sr-only labels) */
-}
-
-/* Screen reader only for labels */
-.sr-only {
-    margin-bottom: 5px;
+.about-us-box {
+    border: 2px solid var(--text-color);
     display: block;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 0 auto 30px;
+    text-transform: uppercase;
+    width: auto;
+
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    font-family: var(--font1);
-    width: 100%;
-    padding: 15px 12px;
-    background-color: var(--form-bg);
-    border: 1px solid transparent;
-    border-radius: 5px;
+.our-vision-section {
+    background-color: var(--background);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.our-vision-box {
+    display: inline-block;
+    background-color: #3f3f3f;
     color: var(--text-color);
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
-input::placeholder,
-textarea::placeholder {
-    color: var(--placeholder-color);
-    opacity: 0.8;
+.hidee {
+    display: none;
 }
 
-input:focus,
-textarea:focus {
-    border-color: rgba(215, 215, 16, 0.592);
-}
-
-textarea {
-    resize: vertical;
-    /* Allow vertical resizing only */
-    min-height: 100px;
-    /* Minimum height for message box */
-}
-
-.phone-input-group {
+.vision-content {
     display: flex;
+    flex-wrap: wrap;
+    gap: 7%;
+    align-items: stretch;
 }
 
-.phone-input-group select {
-    background-color: rgb(65, 65, 65);
-    border: 1px solid transparent;
-    border-radius: 5px 0 0 5px;
-    color: var(--text-color);
-    padding: 15px 12px;
-    font-size: 16px;
-    outline: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
-    font-family: var(--font1);
-        width: 40%;
-
+.vision-content .text-content {
+    flex: 4;
 }
 
-.phone-input-group select:focus {
-    border-color: rgba(215, 215, 16, 0.592);
+.text-content li {
+    list-style-type: disc;
+    margin-left: 20px;
 }
 
-.phone-input-group input[type="tel"] {
-    flex-grow: 1;
-    border-radius: 0 5px 5px 0;
+.text-content span {
+    font-weight: bold;
+    display: inline-block;
 }
 
-.submit-button {
-    background-color: #303030;
-    color: var(--text-color);
-    padding: 15px 25px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%;
-    font-family: var(--font1);
+.vision-content .text-content p {
+    font-size: 1.0em;
+    color: #cccccc;
+    margin-bottom: 15px;
 }
 
-.submit-button:hover {
-    background-color: rgba(255, 255, 0, 0.075);
-    transform: translateY(-1px);
+.vision-content .image-content {
+    flex: 2.7;
+}
+
+.vision-content .image-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-us-section h1 {
+        font-size: 2.2em;
+    }
+
+    .hideee {
+        display: none;
+    }
+
+    .hidee {
+        display: block;
+        width: 160px;
+        text-align: center;
+        margin: 40px auto;
+    }
+
+    .vision-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .text-content li{
+        list-style-type: none;
+    }
+
+    .vision-content .text-content,
+    .vision-content .image-content {
+        min-width: unset;
+        /* Remove min-width for stacking */
+        width: 100%;
+        /* Take full width when stacked */
+    }
+
+    .vision-content .image-content {
+        order: -1;
+        /* Move image above text on smaller screens if desired */
+        margin-bottom: 30px;
+        /* Add space below image */
+    }
+       
+}
+
+@media (max-width: 480px) {
+    .about-us-section h1 {
+        font-size: 1.8em;
+    }
+
+    .about-us-section p,
+    .our-vision-section p {
+        font-size: 0.9em;
+    }
 }
 
 
-/* Responsive Design */
-@media (min-width: 768px) {
-    .contact-section {
-        flex-direction: row;
-        align-items: start;
-        text-align: left;
-        gap: 50px;
-        padding: 120px var(--padding-desktop) 80px;
-    }
-
-    .contact-info {
-        text-align: left;
-        flex: 1;
-    }
-
-    .main-heading {
-        font-size: 2.5rem;
-        text-align: left;
-    }
-
-    .contact-form-container {
-        flex: 1;
-                max-width: 50%;
-    }
-
-    .form-group-row {
-        flex-direction: row;
-    }
-
-    .header {
-        padding: 20px var(--padding-desktop);
-    }
+.blockchain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: clamp(300px, 80%, 1000px);
+    margin: 60px auto;
+    gap: 40px;
+    align-items: start;
 }
-
-@media (min-width: 1200px) {
-    .main-heading {
-        font-size: 3em;
-    }
-        .contact-section{
-            gap: 100px;
+.blockchain h2{
+    margin-bottom: 30px;
+}
+.blockchain li{
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 768px){
+    .blockchain {
+            flex-direction: column;
+            gap: 80px;
         }
-}
-#responseMessage{
-    font-family: var(--font1);
-    color: rgba(255, 255, 0, 0.572);
-    font-weight: 100;
 }
