@@ -6,25 +6,23 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Nodemailer transporter setup
 const transporter = nodemailer.createTransport({
-    service: "gmail", // Ensure this is correct for your sending email (e.g., Gmail)
+    service: "gmail", 
     auth: {
-        user: process.env.EMAIL_USER, // Your sending email address from .env
-        pass: process.env.EMAIL_PASS, // Your app-specific password from .env
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS, 
     },
 });
 
-// Route to send email
+
+
 app.post("/send-email", async (req, res) => {
     const { firstName, lastName, email, countryCode, contactNumber, message } =
         req.body;
 
-    // --- Server-side Validation ---
     if (
         !firstName ||
         !lastName ||
@@ -191,9 +189,9 @@ app.post("/send-email", async (req, res) => {
     `;
 
     const mailOptions = {
-        from: `"Rich" <${process.env.EMAIL_USER}>`, // Sender's display name is "Rich"
-        to: recipientEmail, // Email sent to wisesabh@gmail.com
-        replyTo: email, // Reply-to set to the user's email
+        from: `"Rich" <${process.env.EMAIL_USER}>`,
+        to: recipientEmail, 
+        replyTo: email, 
         subject: emailSubject,
         html: emailHtmlBody,
     };
@@ -210,7 +208,14 @@ app.post("/send-email", async (req, res) => {
     }
 });
 
-// Start the server
+
+app.get("/message", (req, res) => {
+    console.log("Backend /message endpoint hit!"); 
+    res.send(
+        "Server is running"
+    );
+});
+
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
