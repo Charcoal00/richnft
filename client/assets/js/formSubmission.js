@@ -258,11 +258,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Call the function to populate the dropdown when the DOM is ready
-    if (countryCodeSelect) {
-        populateCountryCodes();
-    } else {
-        console.error("Country code select element not found.");
-    }
+    // if (countryCodeSelect) {
+    //     populateCountryCodes();
+    // } else {
+    //     console.error("Country code select element not found.");
+    // }
 
     // Your existing form submission logic
     if (contactForm) {
@@ -274,31 +274,31 @@ document.addEventListener("DOMContentLoaded", () => {
             const lastName = document.getElementById("lastName").value.trim();
             const email = document.getElementById("email").value.trim();
             // Now get the value from the dynamically populated select
-            const countryCode = document.getElementById("countryCode").value;
-            const contactNumber = document
-                .getElementById("contactNumber")
-                .value.trim();
+            // const countryCode = document.getElementById("countryCode").value;
+            // const contactNumber = document
+            //     .getElementById("contactNumber")
+            //     .value.trim();
             const message = document.getElementById("message").value.trim();
 
             // Basic client-side validation for the country code
-            if (!countryCode) {
-                responseMessage.textContent = "Please select a country code.";
-                responseMessage.style.color = "red";
-                return; // Stop submission
-            }
+            // if (!countryCode) {
+            //     responseMessage.textContent = "Please select a country code.";
+            //     responseMessage.style.color = "red";
+            //     return; // Stop submission
+            // }
 
             // Prepare the data object to send to the backend
             const formData = {
                 firstName: firstName,
                 lastName: lastName,
                 email: email,
-                countryCode: countryCode,
-                contactNumber: contactNumber,
+                // countryCode: countryCode,
+                // contactNumber: contactNumber,
                 message: message,
             };
 
             responseMessage.textContent = "Sending your message...";
-            responseMessage.style.color = "blue";
+            responseMessage.style.color = "#e0e0e0";
 
             try {
                 // const backendUrl = "http://localhost:3000/send-email";
@@ -317,17 +317,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (response.ok) {
                     responseMessage.textContent =
                         "Message sent successfully! We will get back to you shortly.";
-                    responseMessage.style.color = "green";
+                    responseMessage.style.color = "#c8b461d8";
                     contactForm.reset(); // Clear the form fields on success
                     // Reset the country code dropdown to its initial state (e.g., Select Country Code or +234)
-                    const nigeriaOptionAfterReset =
-                        countryCodeSelect.querySelector('option[value="+234"]');
-                    if (nigeriaOptionAfterReset) {
-                        nigeriaOptionAfterReset.selected = true;
-                    } else {
-                        // Fallback to default "Select Country Code" if +234 isn't available or preferred
-                        countryCodeSelect.value = "";
-                    }
+                    // const nigeriaOptionAfterReset =
+                    //     countryCodeSelect.querySelector('option[value="+234"]');
+                    // if (nigeriaOptionAfterReset) {
+                    //     nigeriaOptionAfterReset.selected = true;
+                    // } else {
+                    //     // Fallback to default "Select Country Code" if +234 isn't available or preferred
+                    //     countryCodeSelect.value = "";
+                    // }
                 } else {
                     responseMessage.textContent =
                         result.error ||

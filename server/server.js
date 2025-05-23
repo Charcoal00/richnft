@@ -10,48 +10,48 @@ app.use(cors());
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
-    service: "gmail", 
+    service: "gmail",
     auth: {
-        user: process.env.EMAIL_USER, 
-        pass: process.env.EMAIL_PASS, 
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
 });
 
-
-
 app.post("/send-email", async (req, res) => {
-    const { firstName, lastName, email, countryCode, contactNumber, message } =
-        req.body;
+    const {
+        firstName,
+        lastName,
+        email,
+        // countryCode,
+        // contactNumber,
+        message,
+    } = req.body;
 
     if (
         !firstName ||
         !lastName ||
         !email ||
-        !countryCode ||
-        !contactNumber ||
+        // !countryCode ||
+        // !contactNumber ||
         !message
     ) {
-        return res
-            .status(400)
-            .json({
-                error: "All fields are required.",
-                details: "Missing form data.",
-            });
+        return res.status(400).json({
+            error: "All fields are required.",
+            details: "Missing form data.",
+        });
     }
 
     const emailRegex = /\S+@\S+\.\S+/;
     if (!emailRegex.test(email)) {
-        return res
-            .status(400)
-            .json({
-                error: "Invalid email format.",
-                details: `Provided email: ${email}`,
-            });
+        return res.status(400).json({
+            error: "Invalid email format.",
+            details: `Provided email: ${email}`,
+        });
     }
 
-    const fullContactNumber = `${countryCode}${contactNumber}`;
+    // const fullContactNumber = `${countryCode}${contactNumber}`;
 
-    const recipientEmail = "wisestar175@gmail.com";
+    const recipientEmail = "only1tef@gmail.com";
 
     const emailSubject = `New Contact Form Submission from ${firstName} ${lastName}`;
 
@@ -162,10 +162,7 @@ app.post("/send-email", async (req, res) => {
                             <td><strong>Email:</strong></td>
                             <td><a href="mailto:${email}" style="color: #ffcc00; text-decoration: none;">${email}</a></td>
                         </tr>
-                        <tr>
-                            <td><strong>Contact No:</strong></td>
-                            <td>${fullContactNumber}</td>
-                        </tr>
+                        
                     </table>
                     <div class="message-box">
                         <p><strong>Message:</strong></p>
@@ -190,8 +187,8 @@ app.post("/send-email", async (req, res) => {
 
     const mailOptions = {
         from: `"Rich" <${process.env.EMAIL_USER}>`,
-        to: recipientEmail, 
-        replyTo: email, 
+        to: recipientEmail,
+        replyTo: email,
         subject: emailSubject,
         html: emailHtmlBody,
     };
@@ -208,12 +205,9 @@ app.post("/send-email", async (req, res) => {
     }
 });
 
-
 app.get("/message", (req, res) => {
-    console.log("Backend /message endpoint hit!"); 
-    res.send(
-        "Server is running"
-    );
+    console.log("Backend /message endpoint hit!");
+    res.send("Server is running");
 });
 
 app.listen(port, () => {
