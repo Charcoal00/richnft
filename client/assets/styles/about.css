@@ -185,15 +185,24 @@
     }
 }
 
-
+.blockchain-container{
+    padding: 40px 0;
+    width: 100%;
+    background-color: var(--background);
+}
 .blockchain {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     width: clamp(300px, 80%, 1000px);
     margin: 60px auto;
     gap: 40px;
     align-items: start;
+}
+.blockchain > div{
+    flex: 0 0 300px;
 }
 .blockchain h2{
     margin-bottom: 30px;
