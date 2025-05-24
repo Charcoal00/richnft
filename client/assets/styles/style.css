@@ -137,11 +137,11 @@ header {
 }
 
 .nav-links2 li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .nav-links2 a {
-    padding: 30px 20px;
+    padding: 15px 20px;
 }
 
 .nav-links a,
@@ -252,7 +252,7 @@ header {
 
     .hero {
         height: auto !important;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
     }
 
     section.hero h1 {

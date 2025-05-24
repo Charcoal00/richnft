@@ -349,3 +349,8 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Contact form element not found.");
     }
 });
+
+
+
+
+// git commit -am 'made new changed to the landing page'  -m 'removed the donate btn and created more space in the navbar'
